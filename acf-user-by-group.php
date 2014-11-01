@@ -2,27 +2,26 @@
 /**
  * Plugin Name: ACF User by Group
  * Plugin URI: https://github.com/Nessworthy/acf-user-by-group
- * Description: Allows admins to filter Advanced Custom Field's field groups by a user's group from the Groups plugin.
+ * Description: Enables admins to filter Advanced Custom Field's field groups by a user's group from the Groups plugin.
  * Version: 1.0
  * Author: Sean Nessworthy
  * Author URI: http://nessworthy.me
  * License: GPL2
- */
-
-/*  Copyright 2014 Sean Nessworthy (email : sean@nessworthy.me)
-
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as 
-    published by the Free Software Foundation.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ * 
+ * Copyright 2014 Sean Nessworthy (email : sean@nessworthy.me)
+ *
+ *    This program is free software; you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License, version 2, as 
+ *    published by the Free Software Foundation.
+ *
+ *    This program is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ *
+ *    You should have received a copy of the GNU General Public License
+ *    along with this program; if not, write to the Free Software
+ *    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 // No meddling kids.
