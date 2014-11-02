@@ -24,7 +24,7 @@ Please submit support requests at the [github](https://github.com/Nessworthy/acf
 
 1. /assets/screenshot-1.png
 
-## Changelog ==
+## Changelog
 
 ### `1.0`
 
