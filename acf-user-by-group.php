@@ -40,16 +40,17 @@ function acf_user_by_group()
 	}
 
 	// Add the ACF tule type.
-	add_filter('acf/location/rule_types', 'acf_user_by_group_add_rule_type', 10, 1);
+	add_filter( 'acf/location/rule_types', 'acf_user_by_group_add_rule_type', 10, 1 );
 
 	// Add the Groups to the ACF rule type location.
-	add_filter('acf/location/rule_values/user_by_group', 'acf_user_by_group_add_rule_type_options', 10, 1);
+	add_filter( 'acf/location/rule_values/user_by_group', 'acf_user_by_group_add_rule_type_options', 10, 1 );
 
 	// Add the rule match check for ACF field placement pages.
-	add_filter('acf/location/rule_match/user_by_group', 'acf_user_by_group_rule_match', 10, 3);
+	add_filter( 'acf/location/rule_match/user_by_group', 'acf_user_by_group_rule_match', 10, 3 );
 
 }
 
+// Init priority 1 ensures that the right filters are hooked on to before ACF fires them off.
 add_action( 'init', 'acf_user_by_group', 1 );
 
 
@@ -62,7 +63,7 @@ add_action( 'init', 'acf_user_by_group', 1 );
 function acf_user_by_group_add_rule_type( $choices )
 {
 
-	$category_key = __("Other",'acf');
+	$category_key = __( 'Other', 'acf' );
 
 	/**
 	 * Filter the rule type category that the user group option should fall under.
@@ -100,7 +101,8 @@ function acf_user_by_group_add_rule_type( $choices )
  * @param  array $choices The choices to have available.
  * @return array          The modified choices array with all groups.
  */
-function acf_user_by_group_add_rule_type_options( $choices ) {
+function acf_user_by_group_add_rule_type_options( $choices )
+{
 
 	// Add the exception 'any'.
 	$choices[ 'any' ] = __( 'Any', 'acf_user_by_group' );
@@ -126,12 +128,12 @@ function acf_user_by_group_add_rule_type_options( $choices ) {
 
 
 /**
- * Checks if the user is in
+ * Checks if the user is in the specific Groups group.
  * 
  * @param  boolean $match   Whether to show the fields or not.
  * @param  array   $rule    Details of the rule, contains the operator, value, etc.
  * @param  array   $options Details of the current page. Contains the user ID.
- * @return [type]          [description]
+ * @return boolean          Whether to show the fields or not. True if yes, false if no.
  */
 function acf_user_by_group_rule_match( $match, $rule, $options )
 {
@@ -207,7 +209,7 @@ function acf_user_by_group_hey_annie_are_you_okay()
 
 	if( !is_plugin_active( $plugin_acf ) || !is_plugin_active( $plugin_groups ) )
 	{
-		add_action('admin_notices', 'acf_user_by_group_nag_about_plugins');
+		add_action( 'admin_notices', 'acf_user_by_group_nag_about_plugins' );
 		return false;
 	}
 
@@ -218,7 +220,7 @@ function acf_user_by_group_hey_annie_are_you_okay()
 
 /**
  * Fired on admin notices, will display a notice to the user
- * telling them that this plugin is useless without ACF and groups.
+ * telling them that this plugin is useless without ACF and Groups plugins.
  */
 function acf_user_by_group_nag_about_plugins()
 {
